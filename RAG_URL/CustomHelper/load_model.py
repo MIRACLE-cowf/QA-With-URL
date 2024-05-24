@@ -25,8 +25,8 @@ def get_anthropic_model(model_name="haiku", temperature=0.3) -> ChatAnthropic:
     return llm
 
 
-def get_openai_model(model_name="gpt3.5", temperature=0.3) -> ChatOpenAI:
-    if model_name == 'gpt4':
+def get_openai_model(model_name="gpt4o", temperature=0.3) -> ChatOpenAI:
+    if model_name == 'gpt4o':
         model = "gpt-4o-2024-05-13"
     else:
         model = "gpt-4-turbo-2024-04-09"

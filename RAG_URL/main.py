@@ -8,7 +8,7 @@ from qa_chain import get_qa_chain
 
 if __name__ == '__main__':
 	urls = [
-		"",
+		"", # You can put any URL links in here.
 	]
 	loader = AsyncHtmlLoader(urls)
 	docs = loader.load()
@@ -17,6 +17,8 @@ if __name__ == '__main__':
 	# print(transform_pretty_format(docs_transformed))
 	pretty_docs = transform_pretty_format(docs_transformed)
 	print(pretty_docs)
+	# But some URLs can't loaded well, so I hopefully recommended before run llm, check url's content first(pretty_docs).
+
 	chat_history = ChatMessageHistory()
 	qa_chain = get_qa_chain(pretty_notebook=pretty_docs)
 	while True:
